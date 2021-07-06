@@ -1,0 +1,172 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #ffffff;
+    font-size: 16px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+/*
+ * Styles for the deck of cards
+ */
+
+.deck {
+    background: #EFEFEF;
+    box-shadow: 8px 9px 26px 0 rgba(46, 61, 73, 0.5);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.align-cards {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+}
+
+.created-by {
+    align-self: flex-end;
+    font-size: large;
+    margin-top: 4px;
+}
+
+.action-btns {
+    background: #72C3DC;
+    font-size: 15px;
+    color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 160px;
+    height: 40px;
+    transform: translateY(2px);
+}
+
+.cards-panel {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-inline-start: 0;
+    margin-block-end: 0;
+}
+
+.card {
+    height: 130px;
+    width: 135px;
+    font-size: 42px;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/***************** Media queries***************************/
+
+
+@media (max-width: 450px) {
+    .container {
+        color: #ffffff;
+        background: rgb(0, 0, 0);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .deck {
+        width: 95%;
+        height: 89%;
+        flex-direction: column-reverse;
+        background: #FFFFFF;
+    }
+
+    .btns-container {
+        display: flex;
+        flex-direction: row;
+        margin-top: 16px;
+    }
+
+    .cards-panel {
+        width: 100%;
+    }
+
+    .align-cards {
+        height: 93%;
+    }
+
+    .card {
+        height: 60px;
+        width: 100%;
+        border-left-style: solid;
+        border-left-width: 11px;
+        color: #000000;
+        margin-bottom: 4px;
+        font-size: xx-large;
+    }
+
+    .action-btns {
+        width: 80px;
+        height: 32px;
+        margin: 0 10px 0 0;
+    }
+
+    .created-by {
+        color: #000000;
+        align-self: center;
+    }
+}
+
+
+/*************** For Tablets and larger screens****************/
+
+@media (min-width: 768px) {
+    .container {
+        font-size: 22px;
+    }
+
+    .deck {
+        width: 641px;
+        height: 450px;
+    }
+
+    .btns-container {
+        align-self: baseline;
+        margin: 40px;
+    }
+
+    .cards-panel {
+        width: 406px;
+    }
+
+    .card {
+        height: 130px;
+        width: 135px;
+    }
+}
+
